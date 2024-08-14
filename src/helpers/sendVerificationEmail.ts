@@ -14,6 +14,7 @@ export async function sendVerificationEmail(
     // Send the email using the resend library
     await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
+      to: email,
       subject: 'Verification Code | Verification OTP',
       react: emailContent
     });
