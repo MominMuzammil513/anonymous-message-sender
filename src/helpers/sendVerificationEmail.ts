@@ -13,8 +13,7 @@ export async function sendVerificationEmail(
     const emailContent = VerificationEmail({ username, otp: verifyCode });
     // Send the email using the resend library
     await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',  // Replace with your verified sender email
-      to: email,
+      from: 'Acme <onboarding@resend.dev>',
       subject: 'Verification Code | Verification OTP',
       react: emailContent
     });
